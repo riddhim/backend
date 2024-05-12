@@ -20,8 +20,8 @@ repositories {
 }
 
 dependencies {
-	compile("org.springframework.boot:spring-boot-starter-web")
-	implementation 'org.springframework:spring-context:5.3.14'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    implementation 'org.springframework:spring-context:5.3.14'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
