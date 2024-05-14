@@ -8,8 +8,9 @@
 
 plugins {
     // Apply the java-library plugin to add support for Java Library
+    id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+//    id 'org.springframework.boot' version '1.4.5.RELEASE'
     id 'java-library'
-    id 'org.springframework.boot' version '1.4.5.RELEASE'
 }
 
 repositories {
@@ -19,8 +20,13 @@ repositories {
     mavenCentral()
 }
 
+//springBoot {
+ //   mainClassName = 'backend' // Replace with your main class name
+//}
+
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
+    implementation "org.springframework.boot:spring-boot-starter-web"
+    implementation platform('org.springframework.boot:spring-boot-starter-parent:1.4.5.RELEASE')
     implementation 'org.springframework:spring-context:5.3.14'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-test'

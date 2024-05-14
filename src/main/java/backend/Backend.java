@@ -7,18 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.beans.BeanInstantiationException;
 
 @SpringBootApplication
-public class App {
+@RestController
+public class Backend {
 
     public static void main(String[] args) {
-        SpringApplication.run(App.class, args);
+        SpringApplication.run(Backend.class, args);
     }
-}
 
-@RestController
-class HelloController {
-
-    @GetMapping("/hello")
+    @GetMapping("/api/hello")
     public String hello() {
-        return "Hello, World!";
+        return "Hello, World!, coming from backend";
     }
 }
